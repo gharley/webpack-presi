@@ -3,7 +3,7 @@
 	<head>
 		<script>
 		var x = 0
-		function increment(){
+		function handler(){
 			x = inc(x);
 			document.getElementById("val").innerHTML = x;
 		}
@@ -12,7 +12,7 @@
 	<body>
 		<div>
 			<div id="val">0</div>
-			<button onclick="increment();">Click Me</button>
+			<button onclick="handler();">Click Me</button>
 		</div>
 		<script src="./js/output.js"></script>
 	</body>

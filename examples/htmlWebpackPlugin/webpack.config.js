@@ -3,9 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry : "./example.js",
   output : {
-    path : "./js",
+    path : "./build",
     publicPath : "./",
-    filename : "output.js"
+    filename : "js/output.js"
   },
   plugins : [new HtmlWebpackPlugin({template: './index.html'})]
 }
