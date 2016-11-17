@@ -1,0 +1,14 @@
+{
+  "name": "htmlwebpackplugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "example.js",
+  "dependencies": {},
+  "devDependencies": {
+    "html-webpack-plugin": "^2.24.1",
+    "webpack": "^1.13.3"
+  },
+  "scripts": {},
+  "author": "Greg Harley",
+  "license": "MIT"
+}

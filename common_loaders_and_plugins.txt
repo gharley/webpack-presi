@@ -1,0 +1,7 @@
+babel-loader
+css-loader
+file-loader
+url-loader
+
+html-webpack-plugin
+extract-text-plugin
