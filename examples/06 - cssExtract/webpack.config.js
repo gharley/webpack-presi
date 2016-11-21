@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry : {
@@ -14,11 +15,15 @@ module.exports = {
   module : {
     loaders : [{
         test : /\.css$/,
-        loaders : ['style-loader', 'css-loader']
+		  loader: ExtractTextPlugin.extract('style', 'css'),
       }
     ]
   },
-  plugins : [new HtmlWebpackPlugin({
+  plugins : [
+    new HtmlWebpackPlugin({
       template : './index.html'
-    })]
+    }), new ExtractTextPlugin('[name].css', {
+      allCkunks : true
+    }),
+  ]
 }
