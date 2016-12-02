@@ -1,5 +1,5 @@
 import {add} from './math';
 
-exports.increment = function(val) {
+exports.increment = val => {
     return add(val, 1);
 };

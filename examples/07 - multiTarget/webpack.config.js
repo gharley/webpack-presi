@@ -40,7 +40,7 @@ if (TARGET === 'start' || !TARGET) {
       module : {
         loaders : [{
             test : /\.s?css$/,
-            loaders : ['style', 'css'],
+            loader : 'style!css',
             // Include accepts either a path or an array of paths.
             include : path.resolve('./')
           },
@@ -67,7 +67,7 @@ if (TARGET === 'build') {
       plugins : [
         // Output extracted CSS to a file
         new ExtractTextPlugin('[name].css', {
-          allCkunks : true
+          allChunks : true
         }),
       ]
     });

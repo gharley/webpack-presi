@@ -1,7 +1,16 @@
 babel-loader
 css-loader
 file-loader
+less-loader
+sass-loader
+style-loader
 url-loader
 
-html-webpack-plugin
+clean-webpack-plugin
+copy-webpack-plugin
 extract-text-plugin
+html-webpack-plugin
+npm-install-webpack-plugin
+webpack.DefinePlugin
+webpack.optimize.CommonsChunkPlugin
+webpack.optimize.UglifyJsPlugin
