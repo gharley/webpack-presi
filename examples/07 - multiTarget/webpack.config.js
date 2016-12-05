@@ -41,7 +41,6 @@ if (TARGET === 'start' || !TARGET) {
         loaders : [{
             test : /\.s?css$/,
             loader : 'style!css',
-            // Include accepts either a path or an array of paths.
             include : path.resolve('./')
           },
         ]
