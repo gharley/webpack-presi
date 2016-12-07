@@ -16,7 +16,7 @@
   },
   "entry" : {
     "description" : "The entry point(s) of the compilation.",
-    "type" : "string or array of strings"
+    "type" : "string, object or array of strings"
   },
   "externals" : {
     "description" : "Specify dependencies that shouldn't be resolved by webpack, but should become dependencies of the resulting bundle. The kind of the dependency depends on `output.libraryTarget`.",
@@ -98,20 +98,6 @@
       },
       "mainFields" : {
         "default" : "For web or webworker targets ['browser', 'module', 'main'], otherwise ['module', 'main']"
-      }
-    }
-  },
-  "resolveLoader" : {
-    "type" : "object",
-    "properties" : {
-      "resolveLoader.unsafeCache" : {
-        "default" : true
-      },
-      "resolveLoader.mainFields" : {
-        "default" : ["loader", "main"]
-      },
-      "resolveLoader.extensions" : {
-        "default" : [".js", ".json"]
       }
     }
   },
