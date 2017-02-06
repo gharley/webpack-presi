@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "html-webpack-plugin": "^2.24.1",
-    "webpack": "^1.13.3"
+    "webpack": "^2.2.1"
   },
   "scripts": {},
   "author": "Greg Harley",

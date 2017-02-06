@@ -13,17 +13,21 @@ module.exports = {
     filename : "js/[name].js"
   },
   module : {
-    loaders : [{
+    rules : [{
         test : /\.css$/,
-		    loader: ExtractTextPlugin.extract('style', 'css'),
+		    loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
+        }),
       }
     ]
   },
   plugins : [
     new HtmlWebpackPlugin({
       template : './index.html'
-    }), new ExtractTextPlugin('[name].css', {
-      allCkunks : true
+    }), new ExtractTextPlugin({
+      filename: '[name].css',
+      allChunks: true
     }),
   ]
 }

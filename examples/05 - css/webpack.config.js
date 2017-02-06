@@ -12,7 +12,7 @@ module.exports = {
     filename : "js/[name].js"
   },
   module : {
-    loaders : [{
+    rules : [{
         test : /\.css$/,
         loaders : ['style-loader', 'css-loader']
       }

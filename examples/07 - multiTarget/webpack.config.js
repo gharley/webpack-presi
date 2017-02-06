@@ -19,8 +19,9 @@ const common = {
   plugins : [
     new HtmlWebpackPlugin({
       template : './index.html'
-    }), new ExtractTextPlugin('[name].css', {
-      allCkunks : true
+    }), new ExtractTextPlugin({
+      filename: '[name].css',
+      allChunks : true
     }),
   ]
 }
@@ -38,9 +39,9 @@ if (TARGET === 'start' || !TARGET) {
       },
       devtool : 'eval-source-map',
       module : {
-        loaders : [{
+        rules : [{
             test : /\.s?css$/,
-            loader : 'style!css',
+            loader : 'style-loader!css-loader',
             include : path.resolve('./')
           },
         ]
@@ -54,18 +55,22 @@ if (TARGET === 'start' || !TARGET) {
 if (TARGET === 'build') {
   module.exports = merge(common, {
       module : {
-        loaders : [
+        rules : [
           // Extract CSS during build
           {
             test : /\.s?css$/,
-            loader : ExtractTextPlugin.extract('style', 'css'),
+            loader : ExtractTextPlugin.extract({
+              fallback: 'style-loader',
+              use: 'css-loader'
+            }),
             include : path.resolve('./')
           }
         ]
       },
       plugins : [
         // Output extracted CSS to a file
-        new ExtractTextPlugin('[name].css', {
+        new ExtractTextPlugin({
+          filename: '[name].css',
           allChunks : true
         }),
       ]

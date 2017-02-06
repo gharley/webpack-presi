@@ -6,11 +6,11 @@ module.exports = {
     filename : "output.js"
   },
   module : {
-    loaders : [{
+    rules : [{
         test : /\.js$/,
-        loader : 'babel',
+        loader : 'babel-loader',
         exclude : /node_modules/,
-        query : {
+        options : {
           presets : ['es2015']
         }
       }
