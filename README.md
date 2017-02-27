@@ -1,2 +1,2 @@
 # webpack-presi
-A presentation of an overview of webpack functionality
+A Boise Code Camp presentation of an overview of webpack functionality

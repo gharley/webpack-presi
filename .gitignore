@@ -4,3 +4,4 @@ js
 build
 .vscode
 *.log
+flow.*
