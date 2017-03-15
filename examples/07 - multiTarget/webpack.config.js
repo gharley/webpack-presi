@@ -19,20 +19,16 @@ const common = {
   plugins : [
     new HtmlWebpackPlugin({
       template : './index.html'
-    }), new ExtractTextPlugin({
-      filename: '[name].css',
-      allChunks : true
-    }),
+    })
   ]
 }
 
-if (TARGET === 'start' || !TARGET) {
+if (TARGET === 'start') {
   module.exports = merge(common, {
       devServer : {
         historyApiFallback : true,
         hot : true,
         inline : true,
-        progress : true,
         stats : 'errors-only',
         host : process.env.HOST,
         port : process.env.PORT
@@ -40,7 +36,7 @@ if (TARGET === 'start' || !TARGET) {
       devtool : 'eval-source-map',
       module : {
         rules : [{
-            test : /\.s?css$/,
+            test : /\.css$/,
             loader : 'style-loader!css-loader',
             include : path.resolve('./')
           },
@@ -58,12 +54,10 @@ if (TARGET === 'build') {
         rules : [
           // Extract CSS during build
           {
-            test : /\.s?css$/,
+            test : /\.css$/,
             loader : ExtractTextPlugin.extract({
-              fallback: 'style-loader',
               use: 'css-loader'
             }),
-            include : path.resolve('./')
           }
         ]
       },
