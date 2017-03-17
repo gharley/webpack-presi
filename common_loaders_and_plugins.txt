@@ -12,5 +12,6 @@ extract-text-plugin
 html-webpack-plugin
 npm-install-webpack-plugin
 webpack.DefinePlugin
+webpack.ProvidePlugin
 webpack.optimize.CommonsChunkPlugin
 webpack.optimize.UglifyJsPlugin

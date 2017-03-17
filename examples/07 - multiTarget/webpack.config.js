@@ -37,8 +37,7 @@ if (TARGET === 'start') {
       module : {
         rules : [{
             test : /\.css$/,
-            loader : 'style-loader!css-loader',
-            include : path.resolve('./')
+            loader : 'style-loader!css-loader'
           },
         ]
       },

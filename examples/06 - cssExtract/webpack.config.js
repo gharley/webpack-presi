@@ -25,8 +25,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template : './index.html'
     }), new ExtractTextPlugin({
-      filename: '[name].css',
-      allChunks: true
+      filename: '[name].css'
     }),
   ]
 }
